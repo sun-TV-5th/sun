@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>すんTV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ようこそ すんTVへ！</h1>
+        <p>この度、すんTV公式サイトが完成いたしました！</p>
+    </div>
+
+    <div class="topic" id="topic">
+        <span class="topic-title">トピック</span>
+        <p class="topic-content">2025年3月19日ですんTVは5周年を迎えます</p>
+    </div>
+
+    <div class="top-videos">
+        <h2 class="top-videos-title">視聴回数TOP3の動画</h2>
+        <div class="video-item">
+            <div class="video-content">
+                <img src="thumbnail1.jpg" alt="動画サムネイル" class="video-thumbnail">
+                <p class="video-description">動画1の説明文</p>
+            </div>
+        </div>
+        <div class="video-item">
+            <div class="video-content">
+                <img src="thumbnail2.jpg" alt="動画サムネイル" class="video-thumbnail">
+                <p class="video-description">動画2の説明文</p>
+            </div>
+        </div>
+        <div class="video-item">
+            <div class="video-content">
+                <img src="thumbnail3.jpg" alt="動画サムネイル" class="video-thumbnail">
+                <p class="video-description">動画3の説明文</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const topic = document.getElementById('topic');
+            const topicPosition = topic.getBoundingClientRect().top;
+
+            if (topicPosition <= 0) {
+                topic.classList.add('fixed');
+            } else {
+                topic.classList.remove('fixed');
+            }
+        });
+    </script>
+</body>
